@@ -9,3 +9,18 @@
         {{ partialCached "article/components/math.html" . }}
     {{ end }}
 </article>
+
+
+<script>
+     $(document).ready(function () {
+
+var colorArr = ["#428BCA", "#AEDCAE", "#ECA9A7", "#DA99FF", "#FFB380", "#D9B999"];
+$('.tagCloud-tags a').each(function () {
+    try {tagsColor = colorArr[Math.floor(Math.random() * colorArr.length)];
+        $(this).css("background", tagsColor); 
+    }
+    catch (err) {}});
+
+});
+</script>
+ 
